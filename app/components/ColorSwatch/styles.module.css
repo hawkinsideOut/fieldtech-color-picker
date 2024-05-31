@@ -1,0 +1,7 @@
+.inputColor[type="color"] {
+	width: 4.688rem;
+	height: 3.125rem;
+	padding: 0.313rem;
+	border-radius: 0.625rem;
+	border: 3px solid black;
+}
