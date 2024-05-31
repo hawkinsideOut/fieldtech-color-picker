@@ -17,6 +17,7 @@ const ColorPicker = ({ colors }) => {
 			<h1
 				id="color-picker-label"
 				className="text-5xl mb-3 sr-only"
+				aria-label="Color picker"
 			>
 				Color Picker
 			</h1>
