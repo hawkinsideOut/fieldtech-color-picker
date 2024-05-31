@@ -1,16 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { toast } from "react-toastify";
 import PropTypes from "prop-types";
 
 const ColorBoard = ({ colors, setClipBoard }) => {
-	const [colorChoice, setColorChoice] = useState("");
-
 	const handleColorClick = async (color) => {
 		try {
 			await navigator.clipboard.writeText(color);
-			setColorChoice(color);
 			setClipBoard(color);
 			toast.success(`Copied ${color} to clipboard!`);
 		} catch (error) {

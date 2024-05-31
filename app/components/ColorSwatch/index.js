@@ -13,7 +13,7 @@ const ColorSwatch = ({ clipBoard }) => {
 	return (
 		<div className="flex flex-col items-center">
 			<div
-				className="w-80 h-80 flex justify-center items-center border-4 border-lightgray-300 rounded-3xl mb-6"
+				className="w-80 h-80 flex items-center border-4 border-lightgray-300 rounded-3xl mb-6"
 				style={{ backgroundColor: bgColor }}
 				onClick={handleBgColor}
 			>
