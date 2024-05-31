@@ -4,12 +4,10 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 const ColorSwatch = ({ clipBoard }) => {
-	const [bgColor, setBgColor] = useState("#ffffff");
-	const [isClicked, setIsClicked] = useState(false);
+	const [bgColor, setBgColor] = useState("");
 
 	const handleBgColor = () => {
 		setBgColor(clipBoard);
-		setIsClicked(true);
 	};
 
 	return (
@@ -21,7 +19,7 @@ const ColorSwatch = ({ clipBoard }) => {
 			>
 				<p
 					className={`text-xl text-center ${
-						!isClicked ? "text-black" : "text-white"
+						!bgColor ? "text-black" : "text-white"
 					}`}
 				>
 					After selecting a color shade, click here to paste color into bordered

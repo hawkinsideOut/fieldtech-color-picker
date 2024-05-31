@@ -26,6 +26,7 @@ const ColorBoard = ({ colors, setClipBoard }) => {
 					key={hexValue}
 					className="my-3"
 				>
+					{/* uppercase first letter and print the rest as is */}
 					<h3>{hexValue.charAt(0).toUpperCase() + hexValue.slice(1)}</h3>
 					<div className="flex">
 						{colors[hexValue].map((colorShade) => (
