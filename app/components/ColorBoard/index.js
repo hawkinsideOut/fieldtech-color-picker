@@ -2,8 +2,9 @@
 
 import { toast } from "react-toastify";
 import PropTypes from "prop-types";
+import { LoadingIcon } from "../LoadingIcon";
 
-const ColorBoard = ({ colors, setClipBoard }) => {
+const ColorBoard = ({ colors, setClipBoard, loading }) => {
 	const handleColorClick = async (color) => {
 		try {
 			await navigator.clipboard.writeText(color);
@@ -14,6 +15,9 @@ const ColorBoard = ({ colors, setClipBoard }) => {
 			console.log(error);
 		}
 	};
+
+	if (loading || Object.keys(colors).length === 0)
+		return <LoadingIcon classNames={"flex items-center"} />;
 
 	return (
 		<>
